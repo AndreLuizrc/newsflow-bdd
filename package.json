@@ -1,0 +1,18 @@
+{
+  "name": "newsflow-bdd",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Entrega de BDD do NewsFlow",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "cucumber-js",
+    "test:dry": "cucumber-js --profile dry",
+    "test:parallel": "cucumber-js --profile parallel",
+    "test:smoke": "cucumber-js --profile smoke"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "12.2.0"
+  }
+}

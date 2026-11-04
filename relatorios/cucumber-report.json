@@ -1,0 +1,4194 @@
+[
+  {
+    "description": "  Como revisora\n  Quero avaliar a edição de outra pessoa\n  Para impedir a divulgação de conteúdo sem revisão independente",
+    "elements": [
+      {
+        "description": "",
+        "id": "aprovar-uma-edição-antes-do-envio;aprovação-por-outra-revisora",
+        "keyword": "Cenário",
+        "line": 12,
+        "name": "Aprovação por outra revisora",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que Ana cria a edição \"Informativo #42\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 323800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 13,
+            "name": "Beatriz aprova a edição",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 64199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 14,
+            "name": "a mensagem é \"Edição aprovada\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 84000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 15,
+            "name": "a edição fica \"aprovada\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 36799
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@US01",
+            "line": 2
+          },
+          {
+            "name": "@RN02",
+            "line": 2
+          },
+          {
+            "name": "@smoke",
+            "line": 11
+          },
+          {
+            "name": "@feliz",
+            "line": 11
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "aprovar-uma-edição-antes-do-envio;autora-tenta-aprovar-o-próprio-conteúdo",
+        "keyword": "Cenário",
+        "line": 18,
+        "name": "Autora tenta aprovar o próprio conteúdo",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que Ana cria a edição \"Informativo #42\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 41400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 19,
+            "name": "Ana aprova a edição",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 20,
+            "name": "a mensagem é \"O autor não pode aprovar a própria edição\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 20699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 21,
+            "name": "a edição fica \"rascunho\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 19900
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@US01",
+            "line": 2
+          },
+          {
+            "name": "@RN02",
+            "line": 2
+          },
+          {
+            "name": "@excecao",
+            "line": 17
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "aprovar-uma-edição-antes-do-envio;reprovação-com-orientação-para-correção",
+        "keyword": "Cenário",
+        "line": 23,
+        "name": "Reprovação com orientação para correção",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que Ana cria a edição \"Informativo #42\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 53899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 24,
+            "name": "Beatriz reprova a edição com o comentário \"Corrigir a data do evento\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 147500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 25,
+            "name": "a mensagem é \"Edição reprovada\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 29899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 26,
+            "name": "a edição fica \"rascunho\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 43299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 27,
+            "name": "o comentário registrado é \"Corrigir a data do evento\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 50200
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@US01",
+            "line": 2
+          },
+          {
+            "name": "@RN02",
+            "line": 2
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "aprovar-uma-edição-antes-do-envio;reprovação-exige-comentário-preenchido",
+        "keyword": "Esquema do Cenário",
+        "line": 36,
+        "name": "Reprovação exige comentário preenchido",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que Ana cria a edição \"Informativo #42\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 40799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 31,
+            "name": "Beatriz reprova a edição com o comentário \"\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 19000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 32,
+            "name": "a mensagem é \"A reprovação exige um comentário\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 33,
+            "name": "nenhum comentário é registrado",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 53999
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@US01",
+            "line": 2
+          },
+          {
+            "name": "@RN02",
+            "line": 2
+          },
+          {
+            "name": "@excecao",
+            "line": 29
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "aprovar-uma-edição-antes-do-envio;reprovação-exige-comentário-preenchido",
+        "keyword": "Esquema do Cenário",
+        "line": 37,
+        "name": "Reprovação exige comentário preenchido",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que Ana cria a edição \"Informativo #42\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 31,
+            "name": "Beatriz reprova a edição com o comentário \"   \"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 19200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 32,
+            "name": "a mensagem é \"A reprovação exige um comentário\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 33,
+            "name": "nenhum comentário é registrado",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9099
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@US01",
+            "line": 2
+          },
+          {
+            "name": "@RN02",
+            "line": 2
+          },
+          {
+            "name": "@excecao",
+            "line": 29
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "aprovar-uma-edição-antes-do-envio;envio-sem-aprovação",
+        "keyword": "Cenário",
+        "line": 40,
+        "name": "Envio sem aprovação",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que Ana cria a edição \"Informativo #42\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 41,
+            "name": "que o segmento \"Premium\" contém \"ana@example.com\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 113600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 42,
+            "name": "a gestora envia a edição para os segmentos escolhidos",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 171599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 43,
+            "name": "a mensagem é \"A edição precisa de aprovação\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 44,
+            "name": "a edição fica \"rascunho\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 45,
+            "name": "são enviados 0 e-mails de newsletter",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 54399
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@US01",
+            "line": 2
+          },
+          {
+            "name": "@RN02",
+            "line": 2
+          },
+          {
+            "name": "@excecao",
+            "line": 39
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "aprovar-uma-edição-antes-do-envio",
+    "line": 3,
+    "keyword": "Funcionalidade",
+    "name": "Aprovar uma edição antes do envio",
+    "tags": [
+      {
+        "name": "@US01",
+        "line": 2
+      },
+      {
+        "name": "@RN02",
+        "line": 2
+      }
+    ],
+    "uri": "features\\us01-aprovacao.feature"
+  },
+  {
+    "description": "  Como gestora\n  Quero programar o envio de uma edição aprovada\n  Para alcançar o público no horário planejado",
+    "elements": [
+      {
+        "description": "",
+        "id": "agendar-e-ajustar-o-horário-de-envio;antecedência-mínima-de-15-minutos",
+        "keyword": "Esquema do Cenário",
+        "line": 20,
+        "name": "Antecedência mínima de 15 minutos",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que Ana cria a edição \"Informativo #42\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 59699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 10,
+            "name": "que o segmento \"Premium\" contém \"ana@example.com\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 64900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 11,
+            "name": "que Beatriz já aprovou a edição",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 42100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 15,
+            "name": "a gestora agenda o envio para daqui a 60 minutos",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 344700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 16,
+            "name": "a mensagem é \"Envio agendado\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 36500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 17,
+            "name": "a edição fica \"agendada\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26500
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@US02",
+            "line": 2
+          },
+          {
+            "name": "@RN03",
+            "line": 2
+          },
+          {
+            "name": "@RN02",
+            "line": 2
+          },
+          {
+            "name": "@smoke",
+            "line": 13
+          },
+          {
+            "name": "@feliz",
+            "line": 13
+          },
+          {
+            "name": "@limite",
+            "line": 13
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "agendar-e-ajustar-o-horário-de-envio;antecedência-mínima-de-15-minutos",
+        "keyword": "Esquema do Cenário",
+        "line": 21,
+        "name": "Antecedência mínima de 15 minutos",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que Ana cria a edição \"Informativo #42\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 34299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 10,
+            "name": "que o segmento \"Premium\" contém \"ana@example.com\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 40999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 11,
+            "name": "que Beatriz já aprovou a edição",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 15,
+            "name": "a gestora agenda o envio para daqui a 16 minutos",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 93599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 16,
+            "name": "a mensagem é \"Envio agendado\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 36099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 17,
+            "name": "a edição fica \"agendada\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 19599
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@US02",
+            "line": 2
+          },
+          {
+            "name": "@RN03",
+            "line": 2
+          },
+          {
+            "name": "@RN02",
+            "line": 2
+          },
+          {
+            "name": "@smoke",
+            "line": 13
+          },
+          {
+            "name": "@feliz",
+            "line": 13
+          },
+          {
+            "name": "@limite",
+            "line": 13
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "agendar-e-ajustar-o-horário-de-envio;antecedência-mínima-de-15-minutos",
+        "keyword": "Esquema do Cenário",
+        "line": 22,
+        "name": "Antecedência mínima de 15 minutos",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que Ana cria a edição \"Informativo #42\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 43299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 10,
+            "name": "que o segmento \"Premium\" contém \"ana@example.com\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 28999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 11,
+            "name": "que Beatriz já aprovou a edição",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 15,
+            "name": "a gestora agenda o envio para daqui a 15 minutos",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 24499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 16,
+            "name": "a mensagem é \"Envio agendado\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 17,
+            "name": "a edição fica \"agendada\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 38999
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@US02",
+            "line": 2
+          },
+          {
+            "name": "@RN03",
+            "line": 2
+          },
+          {
+            "name": "@RN02",
+            "line": 2
+          },
+          {
+            "name": "@smoke",
+            "line": 13
+          },
+          {
+            "name": "@feliz",
+            "line": 13
+          },
+          {
+            "name": "@limite",
+            "line": 13
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "agendar-e-ajustar-o-horário-de-envio;antecedência-mínima-de-15-minutos",
+        "keyword": "Esquema do Cenário",
+        "line": 23,
+        "name": "Antecedência mínima de 15 minutos",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que Ana cria a edição \"Informativo #42\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 48200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 10,
+            "name": "que o segmento \"Premium\" contém \"ana@example.com\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 89700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 11,
+            "name": "que Beatriz já aprovou a edição",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 39400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 15,
+            "name": "a gestora agenda o envio para daqui a 14 minutos",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 46799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 16,
+            "name": "a mensagem é \"O envio precisa de ao menos 15 minutos\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 51199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 17,
+            "name": "a edição fica \"aprovada\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 75299
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@US02",
+            "line": 2
+          },
+          {
+            "name": "@RN03",
+            "line": 2
+          },
+          {
+            "name": "@RN02",
+            "line": 2
+          },
+          {
+            "name": "@smoke",
+            "line": 13
+          },
+          {
+            "name": "@feliz",
+            "line": 13
+          },
+          {
+            "name": "@limite",
+            "line": 13
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "agendar-e-ajustar-o-horário-de-envio;antecedência-mínima-de-15-minutos",
+        "keyword": "Esquema do Cenário",
+        "line": 24,
+        "name": "Antecedência mínima de 15 minutos",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que Ana cria a edição \"Informativo #42\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 30199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 10,
+            "name": "que o segmento \"Premium\" contém \"ana@example.com\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 63500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 11,
+            "name": "que Beatriz já aprovou a edição",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1084999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 15,
+            "name": "a gestora agenda o envio para daqui a 0 minutos",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 66199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 16,
+            "name": "a mensagem é \"O envio precisa de ao menos 15 minutos\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 129300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 17,
+            "name": "a edição fica \"aprovada\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 33599
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@US02",
+            "line": 2
+          },
+          {
+            "name": "@RN03",
+            "line": 2
+          },
+          {
+            "name": "@RN02",
+            "line": 2
+          },
+          {
+            "name": "@smoke",
+            "line": 13
+          },
+          {
+            "name": "@feliz",
+            "line": 13
+          },
+          {
+            "name": "@limite",
+            "line": 13
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "agendar-e-ajustar-o-horário-de-envio;antecedência-mínima-de-15-minutos",
+        "keyword": "Esquema do Cenário",
+        "line": 25,
+        "name": "Antecedência mínima de 15 minutos",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que Ana cria a edição \"Informativo #42\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 36000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 10,
+            "name": "que o segmento \"Premium\" contém \"ana@example.com\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 53899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 11,
+            "name": "que Beatriz já aprovou a edição",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 15,
+            "name": "a gestora agenda o envio para daqui a -1 minutos",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 20899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 16,
+            "name": "a mensagem é \"O envio precisa de ao menos 15 minutos\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 47899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 17,
+            "name": "a edição fica \"aprovada\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 20600
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@US02",
+            "line": 2
+          },
+          {
+            "name": "@RN03",
+            "line": 2
+          },
+          {
+            "name": "@RN02",
+            "line": 2
+          },
+          {
+            "name": "@smoke",
+            "line": 13
+          },
+          {
+            "name": "@feliz",
+            "line": 13
+          },
+          {
+            "name": "@limite",
+            "line": 13
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "agendar-e-ajustar-o-horário-de-envio;horário-interpretado-no-fuso-de-são-paulo",
+        "keyword": "Cenário",
+        "line": 27,
+        "name": "Horário interpretado no fuso de São Paulo",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que Ana cria a edição \"Informativo #42\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 43700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 10,
+            "name": "que o segmento \"Premium\" contém \"ana@example.com\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 81299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 11,
+            "name": "que Beatriz já aprovou a edição",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 97099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 28,
+            "name": "a gestora agenda o envio para \"2026-11-04T09:30:00-03:00\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 138400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 29,
+            "name": "a mensagem é \"Envio agendado\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 30,
+            "name": "o horário do envio em São Paulo é \"04/11/2026, 09:30\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7036400
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@US02",
+            "line": 2
+          },
+          {
+            "name": "@RN03",
+            "line": 2
+          },
+          {
+            "name": "@RN02",
+            "line": 2
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "agendar-e-ajustar-o-horário-de-envio;agendamento-sem-aprovação",
+        "keyword": "Cenário",
+        "line": 33,
+        "name": "Agendamento sem aprovação",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que Ana cria a edição \"Informativo #42\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 42399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 10,
+            "name": "que o segmento \"Premium\" contém \"ana@example.com\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 56199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 11,
+            "name": "que Beatriz já aprovou a edição",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 34,
+            "name": "que Ana cria a edição \"Aviso ainda não revisado\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 35,
+            "name": "a gestora agenda o envio para daqui a 30 minutos",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 36,
+            "name": "a mensagem é \"A edição precisa de aprovação\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 37,
+            "name": "a edição fica \"rascunho\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9999
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@US02",
+            "line": 2
+          },
+          {
+            "name": "@RN03",
+            "line": 2
+          },
+          {
+            "name": "@RN02",
+            "line": 2
+          },
+          {
+            "name": "@excecao",
+            "line": 32
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "agendar-e-ajustar-o-horário-de-envio;até-2-reagendamentos",
+        "keyword": "Esquema do Cenário",
+        "line": 49,
+        "name": "Até 2 reagendamentos",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que Ana cria a edição \"Informativo #42\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 32199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 10,
+            "name": "que o segmento \"Premium\" contém \"ana@example.com\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 34299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 11,
+            "name": "que Beatriz já aprovou a edição",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 41,
+            "name": "que o envio está agendado para daqui a 60 minutos",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 89299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 42,
+            "name": "que a gestora já reagendou o envio 0 vezes",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 142899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 43,
+            "name": "a gestora reagenda o envio para daqui a 120 minutos",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 73399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 44,
+            "name": "a mensagem é \"Envio reagendado\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 45,
+            "name": "o total de reagendamentos é 1",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 28500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 46,
+            "name": "o horário agendado fica a 120 minutos do momento atual",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 24000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@US02",
+            "line": 2
+          },
+          {
+            "name": "@RN03",
+            "line": 2
+          },
+          {
+            "name": "@RN02",
+            "line": 2
+          },
+          {
+            "name": "@limite",
+            "line": 39
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "agendar-e-ajustar-o-horário-de-envio;até-2-reagendamentos",
+        "keyword": "Esquema do Cenário",
+        "line": 50,
+        "name": "Até 2 reagendamentos",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que Ana cria a edição \"Informativo #42\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 10,
+            "name": "que o segmento \"Premium\" contém \"ana@example.com\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 42799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 11,
+            "name": "que Beatriz já aprovou a edição",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 35899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 41,
+            "name": "que o envio está agendado para daqui a 60 minutos",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 60499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 42,
+            "name": "que a gestora já reagendou o envio 1 vezes",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 29500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 43,
+            "name": "a gestora reagenda o envio para daqui a 120 minutos",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 44,
+            "name": "a mensagem é \"Envio reagendado\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 24299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 45,
+            "name": "o total de reagendamentos é 2",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 33700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 46,
+            "name": "o horário agendado fica a 120 minutos do momento atual",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18699
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@US02",
+            "line": 2
+          },
+          {
+            "name": "@RN03",
+            "line": 2
+          },
+          {
+            "name": "@RN02",
+            "line": 2
+          },
+          {
+            "name": "@limite",
+            "line": 39
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "agendar-e-ajustar-o-horário-de-envio;até-2-reagendamentos",
+        "keyword": "Esquema do Cenário",
+        "line": 51,
+        "name": "Até 2 reagendamentos",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que Ana cria a edição \"Informativo #42\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 10,
+            "name": "que o segmento \"Premium\" contém \"ana@example.com\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 32800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 11,
+            "name": "que Beatriz já aprovou a edição",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 41,
+            "name": "que o envio está agendado para daqui a 60 minutos",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 42,
+            "name": "que a gestora já reagendou o envio 2 vezes",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 43,
+            "name": "a gestora reagenda o envio para daqui a 120 minutos",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 44,
+            "name": "a mensagem é \"Limite de 2 reagendamentos atingido\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 45,
+            "name": "o total de reagendamentos é 2",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 41800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 46,
+            "name": "o horário agendado fica a 62 minutos do momento atual",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 334800
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@US02",
+            "line": 2
+          },
+          {
+            "name": "@RN03",
+            "line": 2
+          },
+          {
+            "name": "@RN02",
+            "line": 2
+          },
+          {
+            "name": "@limite",
+            "line": 39
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "agendar-e-ajustar-o-horário-de-envio;reagendamento-com-antecedência-insuficiente-preserva-o-horário",
+        "keyword": "Cenário",
+        "line": 54,
+        "name": "Reagendamento com antecedência insuficiente preserva o horário",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que Ana cria a edição \"Informativo #42\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 46299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 10,
+            "name": "que o segmento \"Premium\" contém \"ana@example.com\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 128500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 11,
+            "name": "que Beatriz já aprovou a edição",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 68099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 55,
+            "name": "que o envio está agendado para daqui a 60 minutos",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 91800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 56,
+            "name": "a gestora reagenda o envio para daqui a 14 minutos",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 67999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 57,
+            "name": "a mensagem é \"O envio precisa de ao menos 15 minutos\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 50099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 58,
+            "name": "o total de reagendamentos é 0",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 32700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 59,
+            "name": "o horário agendado fica a 60 minutos do momento atual",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 68899
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@US02",
+            "line": 2
+          },
+          {
+            "name": "@RN03",
+            "line": 2
+          },
+          {
+            "name": "@RN02",
+            "line": 2
+          },
+          {
+            "name": "@excecao",
+            "line": 53
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "agendar-e-ajustar-o-horário-de-envio;cancelamento-até-5-minutos-antes",
+        "keyword": "Esquema do Cenário",
+        "line": 71,
+        "name": "Cancelamento até 5 minutos antes",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que Ana cria a edição \"Informativo #42\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 58199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 10,
+            "name": "que o segmento \"Premium\" contém \"ana@example.com\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 113499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 11,
+            "name": "que Beatriz já aprovou a edição",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 19900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 63,
+            "name": "que o envio está agendado para daqui a 60 minutos",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 28700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 64,
+            "name": "que faltam 6 minutos para o envio",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 116000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 65,
+            "name": "a gestora cancela o envio",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 115499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 66,
+            "name": "a mensagem é \"Envio cancelado\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 38800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 67,
+            "name": "a edição fica \"aprovada\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 22400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 68,
+            "name": "o agendamento fica \"removido\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 73700
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@US02",
+            "line": 2
+          },
+          {
+            "name": "@RN03",
+            "line": 2
+          },
+          {
+            "name": "@RN02",
+            "line": 2
+          },
+          {
+            "name": "@limite",
+            "line": 61
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "agendar-e-ajustar-o-horário-de-envio;cancelamento-até-5-minutos-antes",
+        "keyword": "Esquema do Cenário",
+        "line": 72,
+        "name": "Cancelamento até 5 minutos antes",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que Ana cria a edição \"Informativo #42\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 34100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 10,
+            "name": "que o segmento \"Premium\" contém \"ana@example.com\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 11,
+            "name": "que Beatriz já aprovou a edição",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 63,
+            "name": "que o envio está agendado para daqui a 60 minutos",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 190100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 64,
+            "name": "que faltam 5 minutos para o envio",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 65,
+            "name": "a gestora cancela o envio",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 66,
+            "name": "a mensagem é \"Envio cancelado\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 110800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 67,
+            "name": "a edição fica \"aprovada\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 45399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 68,
+            "name": "o agendamento fica \"removido\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 43200
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@US02",
+            "line": 2
+          },
+          {
+            "name": "@RN03",
+            "line": 2
+          },
+          {
+            "name": "@RN02",
+            "line": 2
+          },
+          {
+            "name": "@limite",
+            "line": 61
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "agendar-e-ajustar-o-horário-de-envio;cancelamento-até-5-minutos-antes",
+        "keyword": "Esquema do Cenário",
+        "line": 73,
+        "name": "Cancelamento até 5 minutos antes",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que Ana cria a edição \"Informativo #42\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 10,
+            "name": "que o segmento \"Premium\" contém \"ana@example.com\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 50499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 11,
+            "name": "que Beatriz já aprovou a edição",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 28200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 63,
+            "name": "que o envio está agendado para daqui a 60 minutos",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 24499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 64,
+            "name": "que faltam 4 minutos para o envio",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 70999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 65,
+            "name": "a gestora cancela o envio",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 33000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 66,
+            "name": "a mensagem é \"O cancelamento exige ao menos 5 minutos\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 67,
+            "name": "a edição fica \"agendada\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 68,
+            "name": "o agendamento fica \"mantido\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 89800
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@US02",
+            "line": 2
+          },
+          {
+            "name": "@RN03",
+            "line": 2
+          },
+          {
+            "name": "@RN02",
+            "line": 2
+          },
+          {
+            "name": "@limite",
+            "line": 61
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "agendar-e-ajustar-o-horário-de-envio",
+    "line": 3,
+    "keyword": "Funcionalidade",
+    "name": "Agendar e ajustar o horário de envio",
+    "tags": [
+      {
+        "name": "@US02",
+        "line": 2
+      },
+      {
+        "name": "@RN03",
+        "line": 2
+      },
+      {
+        "name": "@RN02",
+        "line": 2
+      }
+    ],
+    "uri": "features\\us02-agendamento.feature"
+  },
+  {
+    "description": "  Como gestora\n  Quero selecionar até 5 segmentos com assinantes\n  Para direcionar a edição sem enviar cópias repetidas",
+    "elements": [
+      {
+        "description": "",
+        "id": "escolher-segmentos-sem-duplicar-destinatários;assinante-presente-em-dois-segmentos-recebe-uma-única-cópia",
+        "keyword": "Cenário",
+        "line": 13,
+        "name": "Assinante presente em dois segmentos recebe uma única cópia",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que Ana cria a edição \"Informativo #42\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 35799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 10,
+            "name": "que Beatriz já aprovou a edição",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 14,
+            "name": "que o segmento \"Premium\" contém \"ana@example.com, bia@example.com\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 27900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 15,
+            "name": "que o segmento \"Tecnologia\" contém \"ana@example.com, caio@example.com\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 19900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 16,
+            "name": "que a gestora escolhe os segmentos \"Premium, Tecnologia\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 138199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 17,
+            "name": "a gestora envia a edição para os segmentos escolhidos",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 89999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 18,
+            "name": "a mensagem é \"Envio realizado\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 66500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 19,
+            "name": "são enviados 3 e-mails de newsletter",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 82300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 20,
+            "name": "\"ana@example.com\" recebe 1 e-mail de newsletter",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 155799
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@US03",
+            "line": 2
+          },
+          {
+            "name": "@RN04",
+            "line": 2
+          },
+          {
+            "name": "@smoke",
+            "line": 12
+          },
+          {
+            "name": "@feliz",
+            "line": 12
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "escolher-segmentos-sem-duplicar-destinatários;quantidade-de-segmentos-permitida",
+        "keyword": "Esquema do Cenário",
+        "line": 30,
+        "name": "Quantidade de segmentos permitida",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que Ana cria a edição \"Informativo #42\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 47200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 10,
+            "name": "que Beatriz já aprovou a edição",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 24,
+            "name": "que a gestora escolhe 0 segmentos com 1 assinante cada",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 100099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 25,
+            "name": "a gestora agenda o envio para daqui a 30 minutos",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 35400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 26,
+            "name": "a mensagem é \"Selecione de 1 a 5 segmentos\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 85299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 27,
+            "name": "a edição fica \"aprovada\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 22099
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@US03",
+            "line": 2
+          },
+          {
+            "name": "@RN04",
+            "line": 2
+          },
+          {
+            "name": "@limite",
+            "line": 22
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "escolher-segmentos-sem-duplicar-destinatários;quantidade-de-segmentos-permitida",
+        "keyword": "Esquema do Cenário",
+        "line": 31,
+        "name": "Quantidade de segmentos permitida",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que Ana cria a edição \"Informativo #42\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 44700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 10,
+            "name": "que Beatriz já aprovou a edição",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 24,
+            "name": "que a gestora escolhe 1 segmentos com 1 assinante cada",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 25,
+            "name": "a gestora agenda o envio para daqui a 30 minutos",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 56700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 26,
+            "name": "a mensagem é \"Envio agendado\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 52099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 27,
+            "name": "a edição fica \"agendada\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 52999
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@US03",
+            "line": 2
+          },
+          {
+            "name": "@RN04",
+            "line": 2
+          },
+          {
+            "name": "@limite",
+            "line": 22
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "escolher-segmentos-sem-duplicar-destinatários;quantidade-de-segmentos-permitida",
+        "keyword": "Esquema do Cenário",
+        "line": 32,
+        "name": "Quantidade de segmentos permitida",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que Ana cria a edição \"Informativo #42\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 57999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 10,
+            "name": "que Beatriz já aprovou a edição",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 39899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 24,
+            "name": "que a gestora escolhe 5 segmentos com 1 assinante cada",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 45200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 25,
+            "name": "a gestora agenda o envio para daqui a 30 minutos",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 136700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 26,
+            "name": "a mensagem é \"Envio agendado\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 39899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 27,
+            "name": "a edição fica \"agendada\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18899
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@US03",
+            "line": 2
+          },
+          {
+            "name": "@RN04",
+            "line": 2
+          },
+          {
+            "name": "@limite",
+            "line": 22
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "escolher-segmentos-sem-duplicar-destinatários;quantidade-de-segmentos-permitida",
+        "keyword": "Esquema do Cenário",
+        "line": 33,
+        "name": "Quantidade de segmentos permitida",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que Ana cria a edição \"Informativo #42\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 91799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 10,
+            "name": "que Beatriz já aprovou a edição",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 101200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 24,
+            "name": "que a gestora escolhe 6 segmentos com 1 assinante cada",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 54400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 25,
+            "name": "a gestora agenda o envio para daqui a 30 minutos",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 121800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 26,
+            "name": "a mensagem é \"Selecione de 1 a 5 segmentos\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 88099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 27,
+            "name": "a edição fica \"aprovada\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 33000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@US03",
+            "line": 2
+          },
+          {
+            "name": "@RN04",
+            "line": 2
+          },
+          {
+            "name": "@limite",
+            "line": 22
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "escolher-segmentos-sem-duplicar-destinatários;um-segmento-vazio-impede-todo-o-agendamento",
+        "keyword": "Cenário",
+        "line": 36,
+        "name": "Um segmento vazio impede todo o agendamento",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que Ana cria a edição \"Informativo #42\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 10,
+            "name": "que Beatriz já aprovou a edição",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 37,
+            "name": "que o segmento \"Premium\" contém \"ana@example.com\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 64000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 38,
+            "name": "que o segmento \"Tecnologia\" contém \"\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 62700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 39,
+            "name": "que a gestora escolhe os segmentos \"Premium, Tecnologia\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 55800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 40,
+            "name": "a gestora agenda o envio para daqui a 30 minutos",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 83899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 41,
+            "name": "a mensagem é \"Segmento sem assinantes bloqueia o agendamento\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 42,
+            "name": "a edição fica \"aprovada\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 51500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 43,
+            "name": "o agendamento fica \"removido\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 62000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@US03",
+            "line": 2
+          },
+          {
+            "name": "@RN04",
+            "line": 2
+          },
+          {
+            "name": "@excecao",
+            "line": 35
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "escolher-segmentos-sem-duplicar-destinatários",
+    "line": 3,
+    "keyword": "Funcionalidade",
+    "name": "Escolher segmentos sem duplicar destinatários",
+    "tags": [
+      {
+        "name": "@US03",
+        "line": 2
+      },
+      {
+        "name": "@RN04",
+        "line": 2
+      }
+    ],
+    "uri": "features\\us03-segmentacao.feature"
+  },
+  {
+    "description": "  Como assinante\n  Quero interromper as newsletters e confirmar um eventual retorno\n  Para controlar meu consentimento de recebimento",
+    "elements": [
+      {
+        "description": "",
+        "id": "sair-da-lista-e-confirmar-o-retorno;descadastro-tem-efeito-imediato-e-confirmação",
+        "keyword": "Cenário",
+        "line": 12,
+        "name": "Descadastro tem efeito imediato e confirmação",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que \"ana@example.com\" é assinante ativa",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 83899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 13,
+            "name": "a assinante solicita o descadastro",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:53"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 81399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 14,
+            "name": "a mensagem é \"Descadastro realizado\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 22600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 15,
+            "name": "a assinante fica \"inativa\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 35799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 16,
+            "name": "é enviado um e-mail de \"confirmacao-descadastro\" para a assinante",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:58"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 72399
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@US04",
+            "line": 2
+          },
+          {
+            "name": "@RN06",
+            "line": 2
+          },
+          {
+            "name": "@smoke",
+            "line": 11
+          },
+          {
+            "name": "@feliz",
+            "line": 11
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "sair-da-lista-e-confirmar-o-retorno;newsletter-contém-acesso-ao-descadastro",
+        "keyword": "Cenário",
+        "line": 18,
+        "name": "Newsletter contém acesso ao descadastro",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que \"ana@example.com\" é assinante ativa",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 45700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 19,
+            "name": "que Ana cria a edição \"Informativo #42\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 20,
+            "name": "que Beatriz já aprovou a edição",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 38099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 21,
+            "name": "que o segmento \"Premium\" contém \"ana@example.com\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 52200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 22,
+            "name": "a gestora envia a edição para os segmentos escolhidos",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 35400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 23,
+            "name": "cada newsletter contém um link de descadastro do destinatário",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:64"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 102699
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@US04",
+            "line": 2
+          },
+          {
+            "name": "@RN06",
+            "line": 2
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "sair-da-lista-e-confirmar-o-retorno;pedido-de-retorno-ainda-não-autoriza-newsletters",
+        "keyword": "Cenário",
+        "line": 25,
+        "name": "Pedido de retorno ainda não autoriza newsletters",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que \"ana@example.com\" é assinante ativa",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 29699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 26,
+            "name": "que a assinante já se descadastrou",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 54199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 27,
+            "name": "a assinante solicita o retorno à lista",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 75099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 28,
+            "name": "a assinante fica \"inativa\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 19299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 29,
+            "name": "é enviado um e-mail de \"confirmacao-retorno\" para a assinante",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:58"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21299
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@US04",
+            "line": 2
+          },
+          {
+            "name": "@RN06",
+            "line": 2
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "sair-da-lista-e-confirmar-o-retorno;confirmação-dentro-das-48-horas-de-validade",
+        "keyword": "Esquema do Cenário",
+        "line": 40,
+        "name": "Confirmação dentro das 48 horas de validade",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que \"ana@example.com\" é assinante ativa",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 33,
+            "name": "que a assinante já se descadastrou",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 34,
+            "name": "que solicitou o retorno há 0 minutos",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:47"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 77399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 35,
+            "name": "a assinante confirma o retorno pelo link recebido",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:55"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 52599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 36,
+            "name": "a mensagem é \"Retorno confirmado\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 20899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 37,
+            "name": "a assinante fica \"ativa\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15799
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@US04",
+            "line": 2
+          },
+          {
+            "name": "@RN06",
+            "line": 2
+          },
+          {
+            "name": "@limite",
+            "line": 31
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "sair-da-lista-e-confirmar-o-retorno;confirmação-dentro-das-48-horas-de-validade",
+        "keyword": "Esquema do Cenário",
+        "line": 41,
+        "name": "Confirmação dentro das 48 horas de validade",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que \"ana@example.com\" é assinante ativa",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 33,
+            "name": "que a assinante já se descadastrou",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 36499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 34,
+            "name": "que solicitou o retorno há 2879 minutos",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:47"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 34600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 35,
+            "name": "a assinante confirma o retorno pelo link recebido",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:55"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 35300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 36,
+            "name": "a mensagem é \"Retorno confirmado\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 36000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 37,
+            "name": "a assinante fica \"ativa\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 17100
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@US04",
+            "line": 2
+          },
+          {
+            "name": "@RN06",
+            "line": 2
+          },
+          {
+            "name": "@limite",
+            "line": 31
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "sair-da-lista-e-confirmar-o-retorno;confirmação-dentro-das-48-horas-de-validade",
+        "keyword": "Esquema do Cenário",
+        "line": 42,
+        "name": "Confirmação dentro das 48 horas de validade",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que \"ana@example.com\" é assinante ativa",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 59700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 33,
+            "name": "que a assinante já se descadastrou",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 49399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 34,
+            "name": "que solicitou o retorno há 2880 minutos",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:47"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 35,
+            "name": "a assinante confirma o retorno pelo link recebido",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:55"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 39400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 36,
+            "name": "a mensagem é \"Link inválido ou expirado\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 48799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 37,
+            "name": "a assinante fica \"inativa\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 48299
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@US04",
+            "line": 2
+          },
+          {
+            "name": "@RN06",
+            "line": 2
+          },
+          {
+            "name": "@limite",
+            "line": 31
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "sair-da-lista-e-confirmar-o-retorno;confirmação-dentro-das-48-horas-de-validade",
+        "keyword": "Esquema do Cenário",
+        "line": 43,
+        "name": "Confirmação dentro das 48 horas de validade",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que \"ana@example.com\" é assinante ativa",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 24299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 33,
+            "name": "que a assinante já se descadastrou",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 34,
+            "name": "que solicitou o retorno há 2881 minutos",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:47"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 35900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 35,
+            "name": "a assinante confirma o retorno pelo link recebido",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:55"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 30300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 36,
+            "name": "a mensagem é \"Link inválido ou expirado\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 27499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 37,
+            "name": "a assinante fica \"inativa\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 32600
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@US04",
+            "line": 2
+          },
+          {
+            "name": "@RN06",
+            "line": 2
+          },
+          {
+            "name": "@limite",
+            "line": 31
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "sair-da-lista-e-confirmar-o-retorno;link-incorreto-não-confirma-o-retorno",
+        "keyword": "Cenário",
+        "line": 46,
+        "name": "Link incorreto não confirma o retorno",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que \"ana@example.com\" é assinante ativa",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 47,
+            "name": "que a assinante já se descadastrou",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 65300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 48,
+            "name": "que solicitou o retorno há 1 minutos",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:47"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 28199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 49,
+            "name": "a assinante confirma o retorno com um link incorreto",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:56"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 80600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 50,
+            "name": "a mensagem é \"Link inválido ou expirado\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 51,
+            "name": "a assinante fica \"inativa\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14599
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@US04",
+            "line": 2
+          },
+          {
+            "name": "@RN06",
+            "line": 2
+          },
+          {
+            "name": "@excecao",
+            "line": 45
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "sair-da-lista-e-confirmar-o-retorno;link-utilizado-não-pode-ser-reutilizado",
+        "keyword": "Cenário",
+        "line": 54,
+        "name": "Link utilizado não pode ser reutilizado",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que \"ana@example.com\" é assinante ativa",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 55,
+            "name": "que a assinante já confirmou o retorno pelo link recebido",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:48"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 54199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 56,
+            "name": "a assinante confirma o retorno pelo link recebido",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:55"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 57,
+            "name": "a mensagem é \"Link inválido ou expirado\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 34400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 58,
+            "name": "a assinante fica \"ativa\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 74000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@US04",
+            "line": 2
+          },
+          {
+            "name": "@RN06",
+            "line": 2
+          },
+          {
+            "name": "@excecao",
+            "line": 53
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "sair-da-lista-e-confirmar-o-retorno;assinante-descadastrada-é-excluída-dos-próximos-envios",
+        "keyword": "Cenário",
+        "line": 60,
+        "name": "Assinante descadastrada é excluída dos próximos envios",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que \"ana@example.com\" é assinante ativa",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 33200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 61,
+            "name": "que a assinante já se descadastrou",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 69299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 62,
+            "name": "que Ana cria a edição \"Informativo #42\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 24600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 63,
+            "name": "que Beatriz já aprovou a edição",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 64,
+            "name": "que o segmento \"Premium\" contém \"ana@example.com, bia@example.com\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 55899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 65,
+            "name": "a gestora envia a edição para os segmentos escolhidos",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 63700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 66,
+            "name": "a mensagem é \"Envio realizado\"",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 33500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 67,
+            "name": "\"ana@example.com\" recebe 0 e-mails de newsletter",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 24499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 68,
+            "name": "\"bia@example.com\" recebe 1 e-mail de newsletter",
+            "match": {
+              "location": "features\\step_definitions\\newsflow.steps.js:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13599
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@US04",
+            "line": 2
+          },
+          {
+            "name": "@RN06",
+            "line": 2
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "sair-da-lista-e-confirmar-o-retorno",
+    "line": 3,
+    "keyword": "Funcionalidade",
+    "name": "Sair da lista e confirmar o retorno",
+    "tags": [
+      {
+        "name": "@US04",
+        "line": 2
+      },
+      {
+        "name": "@RN06",
+        "line": 2
+      }
+    ],
+    "uri": "features\\us04-descadastro.feature"
+  }
+]
