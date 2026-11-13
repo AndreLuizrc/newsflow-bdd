@@ -23,6 +23,10 @@ Fonte: exercicio-newsflow.pdf, 10 páginas, fornecido pelo usuário. O documento
 
 O enunciado permite explicitamente um domínio em memória (página 9). Portanto a entrega inclui regras executáveis e testes de domínio, sem necessidade de interface, API, banco ou envio real de e-mails.
 
+## Etapa posterior — Playwright
+
+O novo documento `Teste de aceitação Playwright.pdf` exige uma interface real e três testes de aceitação: caminho principal, regra que barra erro e regra de estado. A implementação desta etapa acrescenta uma interface de criação, aprovação e envio sobre `NewsFlow`, servidor HTTP com sessões em memória e testes exclusivamente pelo navegador. O recorte anterior de Cucumber permanece. Veja [ACEITACAO.md](../ACEITACAO.md) para os critérios, comandos, tabela de rastreabilidade e evidência do anti-teste.
+
 ## Decisões para pontos não detalhados
 
 - RN03: exatamente 15 minutos permite agendar; exatamente 5 minutos permite cancelar. Reagendamento exige novamente 15 minutos. Cancelar retorna à aprovação e mantém o histórico de reagendamentos.

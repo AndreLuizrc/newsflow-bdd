@@ -1,0 +1,54 @@
+Execução: 2026-11-13T17:49:10.106Z
+Mutação: removida temporariamente a proibição de a autora aprovar a própria edição.
+Comando: npx playwright test -g "C2 -" --reporter=list --output=test-results/anti-teste
+Resultado esperado e observado: 1 teste reprovado na asserção da mensagem de recusa.
+Código original restaurado automaticamente após a execução.
+
+
+Running 1 test using 1 worker
+
+  ✘  1 [chromium] › tests\newsflow.spec.js:35:1 › C2 - recusa aprovação pela autora e impede envio sem revisão (5.7s)
+
+
+  1) [chromium] › tests\newsflow.spec.js:35:1 › C2 - recusa aprovação pela autora e impede envio sem revisão 
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator: getByRole('alert')
+    Expected: "O autor não pode aprovar a própria edição"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveText" getByRole('alert') with timeout 5000ms
+      - waiting for getByRole('alert')
+
+
+      38 |   await page.getByRole('button', { name: 'Aprovar edição' }).click();
+      39 |
+    > 40 |   await expect(page.getByRole('alert')).toHaveText('O autor não pode aprovar a própria edição');
+         |                                         ^
+      41 |   await expect(page.getByText('Situação: rascunho', { exact: true })).toBeVisible();
+      42 |   await page.getByRole('checkbox', { name: 'Tecnologia', exact: true }).check();
+      43 |   await page.getByRole('button', { name: 'Enviar edição' }).click();
+        at D:\Cinc. Comp\ES2\newsflow-bdd\tests\newsflow.spec.js:40:41
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\anti-teste\newsflow-C2---recusa-aprov-25fea--e-impede-envio-sem-revisão-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\anti-teste\newsflow-C2---recusa-aprov-25fea--e-impede-envio-sem-revisão-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\anti-teste\newsflow-C2---recusa-aprov-25fea--e-impede-envio-sem-revisão-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\anti-teste\newsflow-C2---recusa-aprov-25fea--e-impede-envio-sem-revisão-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [chromium] › tests\newsflow.spec.js:35:1 › C2 - recusa aprovação pela autora e impede envio sem revisão 
+
+(node:31984) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)

@@ -7,12 +7,18 @@
     "node": ">=22"
   },
   "scripts": {
+    "start": "node server.js",
+    "test:acceptance": "playwright test",
+    "test:acceptance:anti": "node scripts/verify-anti-test.js",
+    "test:acceptance:ui": "playwright test --ui",
+    "test:acceptance:report": "playwright show-report relatorios/playwright",
     "test": "cucumber-js",
     "test:dry": "cucumber-js --profile dry",
     "test:parallel": "cucumber-js --profile parallel",
     "test:smoke": "cucumber-js --profile smoke"
   },
   "devDependencies": {
-    "@cucumber/cucumber": "12.2.0"
+    "@cucumber/cucumber": "12.2.0",
+    "@playwright/test": "1.65.0"
   }
 }

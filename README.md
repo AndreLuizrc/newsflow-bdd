@@ -1,6 +1,23 @@
-# NewsFlow — BDD com Cucumber.js
+# NewsFlow — BDD e aceitação com Playwright
 
 Entrega acadêmica com quatro histórias, cenários de negócio em português e domínio executável em memória. Integrantes da dupla: **preencher antes de submeter**.
+
+## Nova etapa: aceitação no navegador
+
+```powershell
+npm ci
+npx playwright install chromium
+npx playwright test
+npm run test:acceptance:report
+```
+
+O comando `npx playwright test` inicia o app, executa exatamente três testes no Chromium e encerra o servidor automaticamente. Não inicie o app manualmente para rodar a suíte; a porta 5173 deve estar livre. Em uma máquina com o Chromium do Playwright já instalado, o comando de entrega é `npm i && npx playwright test`.
+
+Critérios, rastreabilidade e evidências estão em [ACEITACAO.md](ACEITACAO.md). O relatório fica em `relatorios/playwright/index.html`; para abri-lo use o script acima ou `npx playwright show-report relatorios/playwright`. Para acompanhar os testes, execute `npm run test:acceptance:ui`.
+
+Para explorar a interface manualmente, rode `npm start` e acesse http://127.0.0.1:5173. A interface usa o mesmo domínio dos cenários Cucumber: criação por Ana, revisão por Ana ou Beatriz e envio para Tecnologia e/ou Ciência. O segmento Tecnologia contém Alice e Bruno; Ciência contém Bruno e Carla. Os envios são simulados e exibidos na tela. Cada navegador recebe uma sessão isolada em memória, preservada ao recarregar, descartada ao reiniciar o servidor. Não há autenticação real.
+
+O anti-teste pode ser reproduzido com `npm run test:acceptance:anti`, com o servidor parado e sem outras suítes rodando. Ele remove temporariamente a regra de autoaprovação, exige a falha do C2, restaura o arquivo original e salva `relatorios/anti-teste.txt`. Depois rode `npx playwright test` para comprovar o retorno ao verde. A execução do anti-teste não substitui o relatório HTML da suíte completa.
 
 ## Como executar
 
@@ -25,7 +42,7 @@ Entrega acadêmica com quatro histórias, cenários de negócio em português e 
 - **RN05 — frequência semanal:** adiada para manter o recorte em quatro histórias; não se implementa fila da próxima semana nem contabilização de transacionais.
 - **RN07 — falha de entrega:** adiada por exigir política de tentativas e classificação de bounce, independentes do comportamento selecionado.
 - **RN08 — push:** adiada por constituir outro canal, com janela de silêncio e limite diário próprios.
-- Interface, autenticação real, persistência, provedor de e-mail e execução automática de disparos no horário não são necessários para o foco de BDD permitido pelo PDF. O envio imediato e o planejamento são operações de domínio; o relógio é simulado.
+- A interface mínima de revisão e envio foi acrescentada para a etapa Playwright. Autenticação real, banco de dados, provedor de e-mail e execução automática de disparos no horário continuam fora do recorte. O envio imediato e o planejamento são operações de domínio; o relógio é simulado. Agendamento e descadastro continuam cobertos pelos cenários Cucumber, sem telas nesta etapa.
 
 ## Premissas e rastreabilidade
 

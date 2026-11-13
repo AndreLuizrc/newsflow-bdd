@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NewsFlow — Revisão e envio</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <main>
+    <header><p>NEWSFLOW / PAINEL EDITORIAL</p><h1>Da revisão ao envio</h1>
+      <p>Prepare uma edição, solicite revisão independente e escolha seu público.</p></header>
+    <p class="notice">Demonstração acadêmica: os envios são registrados em memória, sem e-mails reais. Os dados desta sessão permanecem ao recarregar e são apagados ao reiniciar o servidor.</p>
+    <p id="message" role="status" aria-live="polite"></p>
+    <section aria-labelledby="create-heading">
+      <h2 id="create-heading">1. Criar edição</h2>
+      <form id="create-form">
+        <label for="title">Título da edição</label>
+        <input id="title" name="title" required maxlength="150">
+        <p>Autora: Ana</p><button>Criar edição</button>
+      </form>
+    </section>
+    <section id="edition" aria-label="Edição atual" hidden>
+      <h2 id="edition-title"></h2><p id="edition-status"></p>
+      <form id="approve-form">
+        <label for="reviewer">Revisora</label>
+        <select id="reviewer"><option>Ana</option><option selected>Beatriz</option></select>
+        <button>Aprovar edição</button>
+      </form>
+      <form id="send-form">
+        <fieldset><legend>Segmentos de destino</legend><div id="segments"></div></fieldset>
+        <button>Enviar edição</button>
+      </form>
+    </section>
+    <section aria-labelledby="deliveries-heading">
+      <h2 id="deliveries-heading">Envios registrados</h2>
+      <p id="summary">0 e-mails de newsletter</p>
+      <ul id="deliveries" aria-label="Destinatários da newsletter"></ul>
+    </section>
+  </main>
+</body>
+</html>
